@@ -1,0 +1,36 @@
+<html ng-app="notebook">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.4.2/jquery.mark.es6.js"></script></head>
+    <script src="index.js"></script>
+</head>
+<body>
+<div ng-controller="HashControl" id="wrapper">
+    <div id="notebook">
+        <h1>Hashtag Notebook</h1>
+        <form>
+            <input class="add-input" placeholder="Take note with # to add tag" type="text" ng-model="NoteText"/>
+            <button class="add-btn" ng-click="addNote()"><h2>Add</h2></button>
+        </form>
+        <ul>
+            <li ng-repeat="note in notes | filter: {hash: selected.hash}">{{note.text}}</li>
+        </ul>
+    </div>
+
+
+    <div id="side-bar">
+        <h1>Hashtag #</h1>
+        <select ng-model="selected" ng-options="note.hash for note in notes | filter: empty | unique: 'hash'"  size="30">
+            <option value="">All</option>
+        </select>
+    </div>
+</div>
+<script>
+    $(function() {
+        $("li").markRegExp(/#[a-zA-Z\u4E00-\u9FA5\uF900-\uFA2D]+/);
+    });
+</script>
+</body>
+</html>

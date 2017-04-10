@@ -1,0 +1,102 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+select option:checked {
+    background: linear-gradient(#A5D7D8,#A5D7D8);
+    background-color: #A5D7D8 !important; /* for IE */
+}
+
+select option:hover {
+    background: linear-gradient(#D5F2E8, #D5F2E8);
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#side-bar {
+    width: 25%;
+    height: 100%;
+    float: left;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 26px;
+    line-height: 100px;
+    font-family: monospace;
+    margin: 0;
+}
+
+select {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: monospace;
+}
+
+select option {
+    padding-top: 10px;
+    height: 40px;
+    padding-left: 30px;
+}
+
+option:empty {
+    display: none;
+}
+
+#notebook {
+    padding: 0 40px;
+    width: 75%;
+    float: right;
+}
+
+input.add-input {
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 98%;
+    border: none;
+    outline: none;
+    height: 40px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+button.add-btn {
+    display: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    width: 193px;
+    height: 120px;
+    overflow: scroll;
+    position: relative;
+    list-style: none;
+    padding: 15px;
+    line-height: 1.5em;
+    display: inline-block;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
+    margin: 0 15px 15px 0;
+}
+
+mark {
+    background: #D6F2E8;
+}
+
+
+
+
+
